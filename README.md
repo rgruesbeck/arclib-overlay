@@ -7,22 +7,30 @@ a simple overlay for use in browser games.
 ```
 
 ## Usage
+```js
+createOverlay(<node>, <callback>)
+```
+Create the overlay passing in a root node to attach to.
+Return a template function in the callback.
 
 ### Create
-Create a new overlay and attach a template.
+Create a new overlay and attach a new [lit-html](https://lit-html.polymer-project.org/guide) template function.
+`html` and `styleMap` are provided to the callback.
 ```js
     const overlay = createOverlay(document.body, ({ html, styleMap }) => {
-        return (data) => {
-            let styles = {
-                color: 'red'
-            }
+        let styles = {
+            color: 'red'
+        }
 
+        let overlayTemplate = (data) => {
             return html`
                 <div style=${styleMap(styles)}>
                     <p>Score: ${data.score}</p>
                 </div>
             `;
         }
+
+        return overlayTemplate;
     });
 ```
 
@@ -34,5 +42,3 @@ Update the overlay
         score: 10
     })
 ```
-
-### 

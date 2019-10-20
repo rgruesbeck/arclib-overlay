@@ -22,11 +22,13 @@ const overlayPrototype = {
         return this;
     },
     update: function(updates) {
+        // apply updates
         this.data = {
             ...this.data,
             ...updates
         };
 
+        // render
         this.render();
     },
     render: function() { render(this.template(this.data), this.body) }
@@ -39,7 +41,5 @@ export const createOverlay = (root, templateFactory) => {
             writable: true,
             value: root
         }
-    })
-    .init(templateFactory)
-    .render();
+    }).init(templateFactory);
 };

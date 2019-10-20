@@ -8,7 +8,7 @@ a simple overlay for use in browser games.
 
 ## Usage
 ```js
-createOverlay(<node>, <callback>)
+const overlay = createOverlay(<node>, <callback>)
 ```
 Create the overlay passing in a root node to attach to.
 Return a template function in the callback.

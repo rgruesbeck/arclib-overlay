@@ -6,8 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Ron Gruesbeck",
   "license": "ISC",
+  "keywords": [
+    "game",
+    "overlay"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rgruesbeck/arclib-overlay.git"
+  },
   "dependencies": {
     "lit-html": "^1.1.2"
   }

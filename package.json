@@ -1,6 +1,6 @@
 {
   "name": "arclib-overlay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a flexible base sprite for use in browser games.",
   "main": "index.js",
   "scripts": {

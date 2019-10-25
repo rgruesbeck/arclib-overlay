@@ -30,6 +30,8 @@ const overlayPrototype = {
 
         // render
         this.render();
+
+        return this.data;
     },
     render: function() { render(this.template(this.data), this.body) }
 }
